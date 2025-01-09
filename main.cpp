@@ -9,23 +9,19 @@ using namespace std;
 
 int main() {
 	//creation de point a et b
-	Point a, b;
-	Point C;
+	Point A, B;
 	Point D(-1,3,"D");
-	a.setNom("A");
-	a.setX(2);
-	a.setY(3);
-	b.setNom("B");
-	b.setX(4);
-	b.setY(-2);
-	C.setNom("C");
+	A.setNom("A");
+	A.setX(2);
+	A.setY(3);
+	B.setNom("B");
+	B.setX(4);
+	B.setY(-2);
 
 //affichage des points
-	a.affiche();
+	A.affiche();
 	cout << ' ' << endl;
-	b.affiche();
-	cout << ' ' << endl;
-	C.affiche();
+	B.affiche();
 	cout << ' ' << endl;
 	D.affiche();
 
@@ -35,6 +31,19 @@ int main() {
 	// creation du point E
 	Point E;
 	E.saisir();
-	cout << "voici les coordonée du point E" << endl;
+	cout << "voici les coordonee du point E" << endl;
 	cout << E.getX() << ";" << E.getY() << endl;
+
+	double dist = B.distance(E);
+	cout << "la distance entre les point est de : " << dist << endl;
+
+	//espace
+	cout << ' ' << endl;
+	cout << ' ' << endl;
+
+	A.affiche();
+	B.affiche();
+
+	Point C = A.additionner(&B, "C");
+	C.affiche();
 }

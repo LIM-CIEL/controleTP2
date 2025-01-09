@@ -4,6 +4,7 @@
 
 #include "Point.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -53,6 +54,8 @@ void Point::setNom(string nom)
 
 void Point::saisir()
 {
+	cout << "saisir le nom du point : " << endl;
+	cin >> nom;
 	cout << "saisir la valeur de X" << endl;
 	cin >> x;
 	cout << "saisir la valeur de y" << endl;
@@ -64,13 +67,13 @@ void Point::affiche()
 	cout << "Le Point " << nom << " a pour coordonner : (" << x << " , " << y << ")" << endl;
 }
 
-double Point::distance(Point p1)
+double Point::distance(Point p)
 {
-
-	return 0.0;
+	return sqrt(pow(p.x - x, 2) + pow(p.y - y, 2));
 }
 
-Point Point::additionner(Point pt, string nom)
+Point Point::additionner(Point *pt, string nom)
 {
-	return Point();
+	
+	return Point(x + pt->x, y + pt->y, nom);
 }

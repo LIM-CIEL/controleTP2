@@ -26,5 +26,5 @@ public:
 	void saisir();
 	void affiche();
 	double distance(Point p1);
-	Point additionner(Point pt, string nom);
+	Point additionner(Point *pt, string nom);
 };
