@@ -10,25 +10,31 @@ using namespace std;
 int main() {
 	//creation de point a et b
 	Point a, b;
-	Point C, D(-1, 3);
+	Point C;
+	Point D(-1,3,"D");
+	a.setNom("A");
 	a.setX(2);
 	a.setY(3);
+	b.setNom("B");
 	b.setX(4);
 	b.setY(-2);
+	C.setNom("C");
 
 //affichage des points
-	cout << "voici les coordonée du point A" << endl;
-	cout << a.getX() << ";" << a.getY() << endl;
-	cout << "voici les coordonée du point B" << endl;
-	cout << b.getY() << ";" << b.getY() << endl;
-	cout << "voici les coordonée du point C" << endl;
-	cout << C.getY() << ";" << C.getY() << endl;
-	cout << "voici les coordonée du point D" << endl;
-	cout << D.getY() << ";" << D.getY() << endl;
+	a.affiche();
+	cout << ' ' << endl;
+	b.affiche();
+	cout << ' ' << endl;
+	C.affiche();
+	cout << ' ' << endl;
+	D.affiche();
+
+	//espace
+	cout << ' ' << endl;
 
 	// creation du point E
 	Point E;
 	E.saisir();
 	cout << "voici les coordonée du point E" << endl;
-	cout << E.getY() << ";" << E.getY() << endl;
+	cout << E.getX() << ";" << E.getY() << endl;
 }

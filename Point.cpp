@@ -9,13 +9,15 @@ using namespace std;
 
 Point::Point()
 {
-	
+	this->x = 0;
+	this->y = 0;
 }
 
 Point::Point(double x, double y, string str)
 {
-	this->x = 0;
-	this->y = 0;
+	this->x = x;
+	this->y = y;
+	this->nom = str;
 }
 
 const double Point::getX()
@@ -51,8 +53,6 @@ void Point::setNom(string nom)
 
 void Point::saisir()
 {
-	cout << "veuiller saisir le nom de point" << endl;
-	cin >> nom;
 	cout << "saisir la valeur de X" << endl;
 	cin >> x;
 	cout << "saisir la valeur de y" << endl;
@@ -61,7 +61,7 @@ void Point::saisir()
 
 void Point::affiche()
 {
-	cout << "Le Point " << nom << "a pour coordonner : (" << x << " , " << y << ")" << endl;
+	cout << "Le Point " << nom << " a pour coordonner : (" << x << " , " << y << ")" << endl;
 }
 
 double Point::distance(Point p1)
